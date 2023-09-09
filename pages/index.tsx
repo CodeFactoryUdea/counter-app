@@ -7,8 +7,8 @@ import CircleButtonComponent from "@/component/CircleButtonComponent"
 const Home = () => {
 
   const [numero, setNumero] = useState(0)
-  // positivo negativo neutro
-  const [estadoEscala, setEstadoEscala] = useState("neutro")
+  // par - impar (RETO: poner dos escalas si es par o impar y si además es primo)
+  const [estadoEscala, setEstadoEscala] = useState("par")
 
 
   const incrementar = () => {
@@ -19,22 +19,17 @@ const Home = () => {
     setNumero(numero-1)
   }
 
-  useEffect(() => {    
+  useEffect(() => {
 
     const validarNumero = () => {
-      console.log("llega aqui");
-      
-      if (numero > 0) {
-        setEstadoEscala("positivo")
-      } else if (numero < 0) {
-        setEstadoEscala("negativo")
+      if (numero % 2 == 0) {
+        setEstadoEscala("par")
       } else {
-        setEstadoEscala("neutro")
+        setEstadoEscala("impar")
       }
     }
 
     validarNumero();
-
 
   },[numero])
 
