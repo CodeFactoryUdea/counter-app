@@ -50,7 +50,7 @@ const Home = () => {
       
 
       <div className={Style.botones}>
-        <CircleButtonComponent buttonName="-" action={incrementar}/>
+        <CircleButtonComponent buttonName="-" action={decrementar}/>
         <p>{numero}</p>
         <CircleButtonComponent buttonName="+" action={incrementar}/>
       </div>
