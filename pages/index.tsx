@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react"
-
 import Style from "@/styles/Home.module.css"
-import { log } from "console"
 import CircleButtonComponent from "@/component/CircleButtonComponent"
 
 const Home = () => {
 
+  /*
+  recuerde que se usa useState en este caso para poder hacer el binding nuestra variable
+  numero y la interfaz de usuario, de está manera tendremos las actualizaciones en la UI.
+  */
   const [numero, setNumero] = useState(0)
   // par - impar (RETO: poner dos escalas si es par o impar y si además es primo)
   const [estadoEscala, setEstadoEscala] = useState("par")
